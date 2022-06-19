@@ -1,0 +1,63 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: rebeccapurple;
+    padding: 1rem;
+    color: white;
+    grid-column: span 4;
+    
+}
+li{
+    list-style: none;
+}
+body{
+    display: grid;
+    grid-template-columns: .7fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+.sidebar{
+    padding: 1rem;
+    font-size: 2rem;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 1rem;
+    
+    background-color: rgba(105, 90, 205, 0.363);
+
+}
+.sidebar > ul >li {
+    cursor: pointer;
+}
+.sidebar ::marker{
+    content: '-';
+}
+.sidebar div:last-child{
+    align-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .25rem
+}
+.lists-container{
+    line-height: 1.6;
+}
+.active-list{
+    color: rebeccapurple;
+    font-weight: bolder;
+}
+.forms-container{
+    align-self: end;
+}
+.todo-container{
+    padding: 4rem 2rem;
+    grid-column: span 3;
+    justify-self: center;
+    /* align-self: center; */
+}
+.hide{
+    display: none;
+}
