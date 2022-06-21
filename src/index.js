@@ -1,6 +1,6 @@
 import "./styles.css"
-import { RenderLists } from "./modules/lists"
-import {renderTasks} from "./modules/tasks.js"
+import { RenderLists,renderTasks } from "./modules/lists"
+
 
 
 let tasks = [{
@@ -20,5 +20,5 @@ let tasks = [{
 ]
 
 RenderLists()
-// renderTasks(tasks)
+renderTasks()
 // localStorage.clear()

@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 header{
     background-color: rebeccapurple;
@@ -20,12 +21,24 @@ body{
     grid-template-rows: auto 1fr;
     height: 100vh;
 }
+button{
+    background: rebeccapurple;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+i{
+    text-decoration: none !important;
+    cursor: pointer;
+}
 .sidebar{
     padding: 1rem;
     font-size: 2rem;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     gap: 1rem;
+    
     
     background-color: rgba(105, 90, 205, 0.363);
 
@@ -36,12 +49,12 @@ body{
 .sidebar ::marker{
     content: '-';
 }
-.sidebar div:last-child{
+/* .sidebar div:last-child{
     align-self: end;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: .25rem
-}
+} */
 .lists-container{
     line-height: 1.6;
 }
@@ -51,13 +64,73 @@ body{
 }
 .forms-container{
     align-self: end;
+    display: grid;
+       
 }
+.forms-container > form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.form-buttons-container{
+    display: grid;
+    gap: .25rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 2;
+    padding: 1rem 0;
+
+}
+.forms-container > form > input{
+    padding: .5em;
+    grid-column: span 2;
+    min-width: none;
+    
+} 
+.buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .todo-container{
-    padding: 4rem 2rem;
+    padding: 4em 0;
     grid-column: span 3;
     justify-self: center;
     /* align-self: center; */
+    min-width: 90%;
+    
+}
+.tasks-container{
+    min-width: 100%;
+    display: grid;
+    gap: .5em;
+    padding-bottom: .5em;
+}
+.task-item{
+    background-color: rebeccapurple;
+    display: grid;
+    gap: 1em;
+    color: white;
+    padding: .75em;
+    border-radius: 20px;
+    line-height: 1.6;
+}
+.task-item :last-child{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.task-title{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.fa-solid {
+    text-decoration: none !important;
+}
+.task-complete{
+    background-color: grey;
+    text-decoration: line-through;
 }
 .hide{
-    display: none;
+    display: none !important;
 }

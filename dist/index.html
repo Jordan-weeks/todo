@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="bundle.js" defer></script>
+    <script src="https://kit.fontawesome.com/870b6f2e22.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,7 +19,17 @@
         <div class="forms-container">
             <form action ="" class="new-list-form hide">
                 <input data-new-list-input type="text">
-                <button>Add Project</button>
+                <div class="form-buttons-container">
+                    <button>Add Project</button>
+                    <button data-close-lists>Close</button>
+                </div>
+            </form>
+            <form action ="" class="edit-list-form hide">
+                <input data-edit-list-input type="text">
+                <div class="form-buttons-container">
+                    <button>Save</button>
+                    <button data-close-lists>Close</button>
+                </div>
             </form>
         </div>
         <div class="buttons-container">
@@ -28,15 +39,14 @@
         </div>
         
     </div>
-    <div class="todo-container">
-        
+    <div class="todo-container">        
         <div class="tasks-container">
             <li>task 1</li>
             <li>task 2</li>
             <li>task 3</li>
         </div>
         <button data-open-add-task>Add task</button>
-        <form data-new-task-form action="">
+        <form data-new-task-form class="hide">
             <label for="task-name">Task Name</label>
             <input data-task-name id="task-name" type="text">
             <label for="description">Description</label>
@@ -45,7 +55,7 @@
             <input data-due-date id="due-date" type="date">
             <select data-priority name="priority" id="priority">
                 <option value="low">Low</option>
-                <option value="medium">medium</option>
+                <option value="medium">Medium</option>
                 <option value="high">High</option>
             </select>
             <button data-add-task>Add Task</button>
